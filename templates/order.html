@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Individual Order</title>
+</head>
+<body>
+    <header>
+        <h1>Auld Classic's Bookshop</h1>
+        <h2>{{ order.customer_name }}'s Order</h2>
+    </header>
+    <section class="order_display">
+    <ul class="individual_order">
+        <li>Customer Name: <b>{{ order.customer_name }}</b></li>
+        <li>Order Date: <b>{{ order.order_date }}</b></li>
+        <li>Quantity: <b>{{ order.quantity }}</b></li>
+        <li>Book: <b>{{ order.title }}</b> by <b>{{ order.author }}</b></li>
+    </ul>
+    <div class="images">
+        <img src="/static/img/{{order.customer_pic}}">
+        <img src="/static/img/{{order.cover}}">
+    </div> 
+    </section>
+</body>
+</html>

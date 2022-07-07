@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Orders</title>
+</head>
+<body>
+    <header>
+        <h1>Auld Classic's Bookshop</h1>
+        <h2>{{ title }}</h2>
+    </header>
+    <ul class = 'all_orders'>
+        {% for i, order in all_orders %}
+            <li>Customer Name: <b>{{ order.customer_name }}</b></a>
+            Order Date: <b>{{ order.order_date }}</b><br>
+            Quantity: <b>{{ order.quantity }}</b><br>
+            Book: <b>{{ order.title }}</b> by <b>{{ order.author }}</b><br>
+            <a href="/orders/{{ i }}">View Order Details</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

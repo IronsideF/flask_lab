@@ -1,0 +1,60 @@
+body {
+    font-family: 'Finlandica', sans-serif;
+    margin: 0;
+    background-color: #DDC8C4;
+}
+header {
+    background-color: #6B4D57;
+    color: #EFF9F0;
+    margin: 0;
+    height: 6rem;
+    display: flex;
+    flex-direction: column;
+}
+h1 {
+    margin: 0
+}
+.all_orders {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+}
+.all_orders li {
+    background-color: #EFF9F0;
+    margin-right: 16px;
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    border-color: #896A67;
+    border: solid 2px
+}
+
+.individual_order {
+    list-style: none;
+    display: flex;
+    background-color: #EFF9F0;
+    border: solid #896A67 2px;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.individual_order li {
+    padding: 5px;
+}
+.order_display {
+    display: flex
+}
+
+.images {
+    display: flex;
+    flex-direction: column;
+    width:fit-content;
+    height: 30%
+}
+
+img {
+    max-width: 50%;
+    max-height: 50%;
+    margin-bottom: 5px;
+}
+
